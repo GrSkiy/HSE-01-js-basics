@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>09</title>
+</head>
+<body>
+  <script>
+
+    function addOne(num) {
+      return num + 1
+    }
+
+    let number = Math.floor(Math.random() *100)  
+
+    function nextEven(check) {
+      if (Number.isInteger(check / 2)) {
+        return check
+      } else {
+        return check + 1
+      }
+    }
+
+    console.log(nextEven(1))
+
+    function makeDiff(num1, num2, num3) {
+
+    let max = Math.max(num1, num2, num3)
+    let min = Math.min(num1, num2, num3)
+    let middle = num1 + num2 + num3 - max - min
+
+    console.log('min + 1 = ' + addOne(min))
+    console.log('среднее сделал четным: ' + nextEven(middle))
+    console.log('max - min + middle = ' + (max - min + middle))
+    }
+
+    let number1 = Math.floor(Math.random() * 100)
+    let number2 = Math.floor(Math.random() * 100)
+    let number3 = Math.floor(Math.random() * 100)
+
+    makeDiff(1, 2, 3)
+  </script>
+</body>
+</html>
